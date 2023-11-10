@@ -1,6 +1,6 @@
 from django.db import models
 
-
+#definiendo el modelo cliente
 class Cliente(models.Model):
     nombre=models.CharField(max_length=50)
     apellido=models.CharField(max_length=50)
@@ -10,14 +10,14 @@ class Cliente(models.Model):
 
     def __str__(self):
         return self.nombre + "  " + self.apellido
-    
+    #definiendo el modelo Area
 class Area(models.Model):
     nombre_del_area=models.CharField(max_length=50)
     descripcion=models.CharField()
 
     def __str__(self):
         return self.nombre_del_area
-    
+    #definiendo el modelo Empleado
 class Empleado(models.Model):
     nombre=models.CharField(max_length=50)
     apellido=models.CharField(max_length=50)
@@ -27,7 +27,7 @@ class Empleado(models.Model):
 
     def __str__(self):
         return self.nombre + "  " + self.apellido
-
+    #definiendo el modelo venta
 class Venta(models.Model):
     fecha_venta=models.DateTimeField()
     monto=models.FloatField()
